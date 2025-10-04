@@ -1,0 +1,27 @@
+// Base Styles
+:root {
+    --bg-color: #{$bg-color};
+    --emphasis-color: #{$emphasis-color};
+    --text-color: #{$text-color};
+    --light-text: #{$light-text};
+    --divider-color: #{$divider-color};
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: $font-family;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 125px;
+}

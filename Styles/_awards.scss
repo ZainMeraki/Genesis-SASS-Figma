@@ -1,0 +1,45 @@
+// Awards Section
+.awards {
+    margin-top: 80px;
+}
+
+.award-item {
+    display: flex;
+    align-items: flex-start;
+    padding: 30px 0;
+}
+
+.award-category {
+    font-weight: 700;
+    font-size: 22px;
+    flex: 0 0 200px;
+}
+
+.award-title {
+    font-weight: 700;
+    font-size: 18px;
+    flex: 0 0 150px;
+    margin-left: 210px;
+}
+
+.award-description {
+    font-size: 16px;
+    line-height: 26px;
+    color: var(--light-text);
+    flex: 1;
+    margin-left: 160px;
+}
+
+.award-year {
+    font-weight: 700;
+    font-size: 16px;
+    flex: 0 0 100px;
+    text-align: right;
+    margin-left: 121px;
+}
+
+.divider {
+    height: 2px;
+    background-color: var(--divider-color);
+    width: 100%;
+}

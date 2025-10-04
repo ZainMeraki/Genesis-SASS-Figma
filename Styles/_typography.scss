@@ -1,0 +1,93 @@
+// Typography styles based on the specification
+
+// Mulish, Bold, 40, LineHeight=60
+.intro__title {
+  font-family: $font-family;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 60px;
+  color: $text-color;
+
+  .highlight {
+    color: $emphasis-color;
+  }
+}
+
+// Mulish, Bold, 22, LetterSpacing=-0.42px
+.intro__label {
+  font-family: $font-family;
+  font-weight: 700;
+  font-size: 22px;
+  letter-spacing: -0.42px;
+  color: $emphasis-color;
+}
+
+// Mulish, Bold, 28, LineHeight=38
+.services__title {
+  font-family: $font-family;
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 38px;
+  color: $text-color;
+}
+
+// Mulish, Bold, 22
+.award__source,
+.award__title {
+  font-family: $font-family;
+  font-weight: 700;
+  font-size: 22px;
+  color: $text-color;
+}
+
+// Mulish, Bold, 18
+.award__type {
+  font-family: $font-family;
+  font-weight: 700;
+  font-size: 18px;
+  color: $text-color;
+}
+
+// Mulish, Bold, 16
+.award__year {
+  font-family: $font-family;
+  font-weight: 700;
+  font-size: 16px;
+  color: $text-color;
+}
+
+// Mulish, Italic, 18, Opacity=60%
+.tagline__text {
+  font-family: $font-family;
+  font-style: italic;
+  font-size: 18px;
+  color: $text-color;
+  opacity: 0.6;
+}
+
+// Mulish, Regular, 18, Opacity=60%
+.services__list p,
+.award__description {
+  font-family: $font-family;
+  font-weight: 400;
+  font-size: 18px;
+  color: $text-color;
+  opacity: 0.6;
+}
+
+// Mulish, Regular, 16, LineHeight=26
+.description-text {
+  font-family: $font-family;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 26px;
+  color: $text-color;
+}
+
+// Mulish, Bold, 18, LetterSpacing=-0.35px (already in navigation)
+.nav-link {
+  font-family: $font-family;
+  font-weight: 700;
+  font-size: 18px;
+  letter-spacing: -0.35px;
+}

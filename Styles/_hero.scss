@@ -1,0 +1,53 @@
+// Home Page Hero Styles
+.hero {
+    margin-top: 96px;
+    position: relative;
+}
+
+.shooting-star {
+    color: var(--emphasis-color);
+    font-weight: 700;
+    font-size: 22px;
+    letter-spacing: -0.42px;
+    margin-bottom: 32px;
+}
+
+.hero-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    position: relative;
+}
+
+.hero-heading {
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 60px;
+    max-width: 635px;
+}
+
+.emphasis {
+    color: var(--emphasis-color);
+}
+
+.quote {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    font-style: italic;
+    font-size: 18px;
+    color: var(--light-text);
+    max-width: 190px;
+    white-space: nowrap;
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: -9px;
+        left: 0;
+        width: 30px;
+        height: 2px;
+        background-color: var(--text-color);
+        opacity: 0.5;
+    }
+}

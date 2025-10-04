@@ -1,0 +1,30 @@
+// Services Section
+.services {
+    margin-top: 91px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 80px;
+}
+
+.services-heading {
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 38px;
+    max-width: 635px;
+}
+
+.services-list {
+    display: flex;
+    gap: 70px;
+}
+
+.service-col {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.service-item {
+    font-size: 18px;
+    color: var(--light-text);
+}

@@ -1,0 +1,74 @@
+// Responsive Design
+@media (max-width: 1200px) {
+    .container {
+        padding: 0 60px;
+    }
+    
+    .image-grid {
+        column-count: 2;
+    }
+    
+    .hero-content {
+        flex-direction: column;
+    }
+    
+    .quote {
+        position: static;
+        margin-top: 40px;
+        margin-left: auto;
+    }
+
+    .award-title {
+        margin-left: 100px;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 0 30px;
+    }
+    
+    header, footer {
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    .footer-nav {
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    .hero-heading {
+        font-size: 32px;
+        line-height: 48px;
+    }
+    
+    .image-grid {
+        column-count: 1;
+    }
+    
+    .services {
+        flex-direction: column;
+        gap: 40px;
+    }
+    
+    .award-item {
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    .award-year {
+        text-align: left;
+    }
+
+    .award-title, 
+    .award-description, 
+    .award-year {
+        margin-left: 0;
+        flex: 1 1 100%;
+    }
+
+    .award-category {
+        flex: 1 1 100%;
+    }
+}

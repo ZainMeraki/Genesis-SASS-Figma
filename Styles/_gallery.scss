@@ -1,0 +1,29 @@
+// Image Grid Styles
+.image-grid-section {
+    margin-top: 100px;
+}
+
+.image-grid {
+    column-count: 3;
+    column-gap: 20px;
+    width: 100%;
+    max-width: 1110px;
+    margin: 0 auto;
+}
+
+.grid-item {
+    overflow: hidden;
+    margin-bottom: 20px;
+    break-inside: avoid;
+
+    img {
+        width: 100%;
+        height: auto;
+        display: block;
+        transition: transform 0.3s ease;
+
+        &:hover {
+            transform: scale(1.05);
+        }
+    }
+}

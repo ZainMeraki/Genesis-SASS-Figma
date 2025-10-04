@@ -1,0 +1,34 @@
+// Footer Styles
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 114px;
+    margin-bottom: 47px;
+}
+
+.footer-nav {
+    display: flex;
+    align-items: center;
+    gap: 95px;
+}
+
+.footer-links {
+    display: flex;
+    gap: 30px;
+}
+
+.social-links {
+    display: flex;
+    gap: 24px;
+}
+
+.social-link {
+    color: var(--text-color);
+    font-size: 18px;
+    transition: color 0.3s ease;
+
+    &:hover {
+        color: var(--emphasis-color);
+    }
+}
