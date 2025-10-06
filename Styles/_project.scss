@@ -1,0 +1,251 @@
+// Projects Page Styles
+
+// Projects Page - Override header and footer to match section alignment
+body:has(.project-details) {
+    .container {
+        padding: 0;
+    }
+
+    header,
+    footer {
+        max-width: 1110px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    // Add proper spacing between navigation links on projects page
+    //Note: Some reason Only doing for Footer.
+    header nav ul {
+        gap: 40px;
+    }
+}
+
+// Section 1: Project Details
+.project-details {
+    margin-top: 100px;
+    max-width: 1110px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: space-between;
+    gap: 80px;
+    align-items: flex-start;
+
+    &__left {
+        flex: 1;
+        max-width: 635px;
+    }
+
+    &__title {
+        font-family: $font-family;
+        font-weight: 700;
+        font-size: 40px;
+        line-height: 55px;
+        color: $text-color;
+        margin: 0 0 32px 0;
+    }
+
+    &__description {
+        font-family: $font-family;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 26px;
+        color: $text-color;
+        opacity: 0.8;
+        margin: 0 0 20px 0;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    &__right {
+        flex: 0 0 auto;
+        min-width: 400px;
+    }
+}
+
+// Project Info Table
+.project-info {
+    width: 100%;
+    border-collapse: collapse;
+    
+    &__row {
+        border-bottom: 1px solid $divider-color;
+
+        &:last-child {
+            border-bottom: none;
+        }
+    }
+
+    &__label {
+        font-family: $font-family;
+        font-weight: 700;
+        font-size: 18px;
+        color: $text-color;
+        opacity: 0.5;
+        padding: 20px 60px 20px 0;
+        vertical-align: top;
+        text-align: left;
+    }
+
+    &__value {
+        font-family: $font-family;
+        font-weight: 700;
+        font-size: 18px;
+        color: $text-color;
+        padding: 20px 0;
+        vertical-align: top;
+        text-align: left;
+    }
+}
+
+// Section 2: Project Showcase
+.project-showcase {
+    margin-top: 61px;
+    max-width: 1110px;
+    margin-left: auto;
+    margin-right: auto;
+
+    &__main {
+        width: 100%;
+        overflow: hidden;
+        margin-bottom: 45px;
+
+        img {
+            width: 100%;
+            max-width: 1110px;
+            height: 660px;
+            object-fit: cover;
+            display: block;
+        }
+    }
+
+    &__text {
+        font-family: $font-family;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 26px;
+        color: $text-color;
+        opacity: 0.8;
+        margin: 0 0 45px 0;
+    }
+
+    &__gallery {
+        display: flex;
+        gap: 30px;
+        justify-content: space-between;
+        margin-bottom: 132px;
+    }
+
+    &__item {
+        flex: 0 0 350px;
+        overflow: hidden;
+
+        img {
+            width: 100%;
+            max-width: 350px;
+            height: 400px;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.3s ease;
+
+            &:hover {
+                transform: scale(1.05);
+            }
+        }
+    }
+}
+
+// Responsive Design for Projects Page
+@media (max-width: 1200px) {
+    body:has(.project-details) {
+        .container {
+            padding: 0 60px;
+        }
+
+        header,
+        footer {
+            max-width: 100%;
+        }
+    }
+
+    .project-details {
+        flex-direction: column;
+        gap: 40px;
+        max-width: 100%;
+
+        &__left {
+            max-width: 100%;
+        }
+
+        &__right {
+            min-width: 100%;
+        }
+    }
+
+    .project-showcase {
+        max-width: 100%;
+
+        &__main img {
+            height: auto;
+        }
+
+        &__gallery {
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        &__item {
+            flex: 0 0 calc(50% - 10px);
+
+            img {
+                height: auto;
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    body:has(.project-details) {
+        .container {
+            padding: 0 30px;
+        }
+    }
+
+    .project-details {
+        margin-top: 60px;
+
+        &__title {
+            font-size: 32px;
+            line-height: 44px;
+        }
+    }
+
+    .project-info {
+        &__label {
+            padding: 15px 30px 15px 0;
+            font-size: 16px;
+        }
+
+        &__value {
+            padding: 15px 0;
+            font-size: 16px;
+        }
+    }
+
+    .project-showcase {
+        &__gallery {
+            flex-direction: column;
+            margin-bottom: 80px;
+        }
+
+        &__item {
+            flex: 1 1 100%;
+            
+            img {
+                max-width: 100%;
+            }
+        }
+    }
+}

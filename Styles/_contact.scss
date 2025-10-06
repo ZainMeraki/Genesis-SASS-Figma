@@ -1,0 +1,233 @@
+// Contact Page Styles
+
+// Contact Page - Override header and footer to match section alignment
+body:has(.contact-section) {
+    .container {
+        padding: 0;
+    }
+
+    header,
+    footer {
+        max-width: 1110px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    // Add proper spacing between navigation links on contact page
+    //Note: Some reason Only doing for Footer.
+    nav ul {
+        gap: 40px !important;
+    }
+}
+
+// Section 1: Contact Section
+.contact-section {
+    margin-top: 100px;
+    max-width: 1110px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: space-between;
+    gap: 80px;
+    align-items: flex-start;
+
+    &__left {
+        flex: 1;
+        max-width: 500px;
+    }
+
+    &__title {
+        font-family: $font-family;
+        font-weight: 700;
+        font-size: 40px;
+        line-height: 55px;
+        color: $text-color;
+        margin: 0 0 32px 0;
+    }
+
+    &__description {
+        font-family: $font-family;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 26px;
+        color: $text-color;
+        opacity: 0.8;
+        margin: 0;
+    }
+
+    &__right {
+        flex: 0 0 465px;
+    }
+}
+
+// Contact Form
+.contact-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group {
+    margin-bottom: 46px;
+
+    &:last-of-type {
+        margin-bottom: 36px;
+    }
+}
+
+.form-input {
+    width: 100%;
+    max-width: 465px;
+    font-family: $font-family;
+    font-weight: 700;
+    font-size: 16px;
+    color: $text-color;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid $divider-color;
+    padding: 16px 0;
+    outline: none;
+    transition: border-color 0.3s ease;
+
+    &::placeholder {
+        font-family: $font-family;
+        font-weight: 700;
+        font-size: 16px;
+        color: $text-color;
+        opacity: 0.6;
+    }
+
+    // When focused
+    &:focus {
+        border-bottom-color: $emphasis-color;
+    }
+
+    // When valid (after user input)
+    &:valid:not(:placeholder-shown) {
+        border-bottom-color: #4CAF50;
+        color: $text-color;
+    }
+
+    // When invalid (after user input)
+    &:invalid:not(:placeholder-shown) {
+        border-bottom-color: #F44336;
+    }
+
+    // Textarea specific
+    &.form-textarea {
+        resize: none;
+        min-height: 50px;
+    }
+}
+
+.submit-btn {
+    width: 125px;
+    height: 50px;
+    background-color: $emphasis-color;
+    border: none;
+    font-family: $font-family;
+    font-weight: 700;
+    font-size: 16px;
+    color: #FFFFFF;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+
+    &:hover {
+        background-color: darken($emphasis-color, 10%);
+        transform: translateY(-2px);
+    }
+
+    &:active {
+        transform: translateY(0);
+    }
+}
+
+// Section 2: Contact Image
+.contact-image {
+    margin-top: 100px;
+    margin-bottom: 132px;
+    max-width: 1110px;
+    margin-left: auto;
+    margin-right: auto;
+
+    img {
+        width: 100%;
+        max-width: 1110px;
+        height: 570px;
+        object-fit: cover;
+        display: block;
+    }
+}
+
+// Responsive Design for Contact Page
+@media (max-width: 1200px) {
+    body:has(.contact-section) {
+        .container {
+            padding: 0 60px;
+        }
+
+        header,
+        footer {
+            max-width: 100%;
+        }
+    }
+
+    .contact-section {
+        flex-direction: column;
+        gap: 60px;
+        max-width: 100%;
+
+        &__left {
+            max-width: 100%;
+        }
+
+        &__right {
+            flex: 1 1 100%;
+        }
+    }
+
+    .form-input {
+        max-width: 100%;
+    }
+
+    .contact-image {
+        max-width: 100%;
+
+        img {
+            height: auto;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    body:has(.contact-section) {
+        .container {
+            padding: 0 30px;
+        }
+    }
+
+    .contact-section {
+        margin-top: 60px;
+
+        &__title {
+            font-size: 32px;
+            line-height: 44px;
+        }
+    }
+
+    .form-group {
+        margin-bottom: 36px;
+
+        &:last-of-type {
+            margin-bottom: 30px;
+        }
+    }
+
+    .submit-btn {
+        width: 100%;
+    }
+
+    .contact-image {
+        margin-top: 60px;
+        margin-bottom: 80px;
+    }
+}
